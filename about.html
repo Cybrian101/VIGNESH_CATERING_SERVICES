@@ -111,6 +111,190 @@
 
 
         <!-- About Satrt -->
+        <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            background-color: #f4f4f9;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.8s ease-in-out;
+        }
+
+        .container {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+        }
+
+        .mission-vision {
+            flex: 1;
+            padding: 30px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 8px;
+            transition: transform 0.5s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-vision h2 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .mission-vision p {
+            font-size: 16px;
+            line-height: 1.;
+            color: #555;
+        }
+
+        .mission-vision-container {
+            background-image: url('https://imgs.search.brave.com/JEb3jjguEDJiauaL70ao71-EEM0FM7FynW6dGzrxwC0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YWRvdHJpcC5jb20v/cHVibGljL2ltYWdl/cy9jaXR5L21hc3Rl/cl9pbWFnZXMvNWUz/ZDI1OTNlYzc5NC1P/b3R5X1BhY2thZ2Vf/VG91ci5qcGc'); /* Background image behind mission section */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        .image-container {
+            flex: 1;
+            height: 60vh;
+            background-image: url('https://imgs.search.brave.com/muG64_Bcew3Lmy9bEW-kQLC0E2fwhBlAVn2PPWaHTv0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjEw/NzQyNzI2L3Bob3Rv/L3N0cmVldC1mb29k/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz12SGFLQ01oWXF5/WVJ4dDhfOFVsMm9I/YkszZnQwOWkwVzQ2/QjRaaXoyaEhnPQ'); /* Background image for the left side */
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* The box containing the 'Contact Us' button and image */
+        .contact-box {
+            position: absolute;
+            top: 40%; /* Adjust this value as needed */
+            width: 80%;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.7); /* Slight transparency for box */
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .contact-box:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-box h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .background-section {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://imgs.search.brave.com/0JBMqx0X6Ei2wGef4DxO1f9Od9F-q5_76igqYFbAJJY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTI4/MTgxMTczL3Bob3Rv/L3dvbWFuLWNoZWNr/aW5nLXF1YWxpdHkt/b2YtY29mZmVlLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz16/cFZKbHh6bkY0bVZF/RlY2SHlWY3Z3YkY3/cEktRHBlN3RFeVps/MFpTT09rPQ'); /* Background image behind contact box */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="main-section">
+        <div class="container">
+            <div class="mission-vision">
+                <h2>Our Mission</h2>
+                <p>At Gourmet Catering, we strive to provide delicious, fresh, and memorable meals for all types of events. Our mission is to ensure that each guest experiences the finest cuisine tailored to their tastes and needs.</p>
+                <h2>Our Vision</h2>
+                <p>We envision becoming the leading catering service provider by consistently exceeding customer expectations, offering innovative menus, and ensuring quality in every dish we serve.</p>
+            </div>
+            <div class="image-container"></div>
+        </div>
+    </section>
+
+    <div class="mission-vision-container"></div> <!-- Background image behind the mission and vision -->
+
+    <section class="contact-section">
+        <div class="background-section"></div> <!-- Background image for contact section -->
+        <div class="contact-box">
+            <h2>Get in Touch with Us!</h2>
+            <p>Have any questions or want to book our services? Reach out to us today, and we’ll help you plan the perfect event.</p>
+            <button class="contact-btn">Contact Us</button>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll animation for contact button (optional)
+        document.querySelector('.contact-btn').addEventListener('click', function () {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+    </script>
         <div class="container-fluid py-6">
             <div class="container">
                 <div class="row g-5 align-items-center">
